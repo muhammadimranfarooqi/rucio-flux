@@ -4,4 +4,4 @@ metadata:
   name: int-config
   namespace: flux-system
 resources:
-  - int-config
+  - int-config/prometheus-kustomization.yaml
