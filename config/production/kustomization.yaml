@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: rucio
+
+configMapGenerator:
+  - name: flux-rucio-server2
+    files:
+      - values.yaml=flux-rucio-server.yaml
+configurations:
+  - kustomizeconfig.yaml
+
+
+# FIXME: I can get one of these working but not more than one. I cannot figure out why. I keep running into non-root errors.
+# Do I really need to make a new directory for every customization namespace or ? How can I include other customizations
+# as resources
