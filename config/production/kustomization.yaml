@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: rucio
 
 configMapGenerator:
-  - name: flux-rucio-server2
+  - name: prod-rucio-server
     files:
-      - values.yaml=flux-rucio-server.yaml
+      - values.yaml=prod-rucio-server.yaml
 configurations:
   - kustomizeconfig.yaml
 
